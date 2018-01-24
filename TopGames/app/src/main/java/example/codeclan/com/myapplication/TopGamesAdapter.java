@@ -22,7 +22,7 @@ public class TopGamesAdapter extends ArrayAdapter<Game> {  /// put extends Array
     @Override
     public View getView(int position, View listItemView, ViewGroup parent) {
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.game_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.games_item, parent, false);
         }
 
         Game currentGame = getItem(position);
