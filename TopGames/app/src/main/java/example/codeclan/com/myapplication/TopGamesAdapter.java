@@ -36,6 +36,8 @@ public class TopGamesAdapter extends ArrayAdapter<Game> {  /// put extends Array
         TextView year = (TextView) listItemView.findViewById(R.id.year);
         year.setText(currentGame.getYear().toString());
 
+        listItemView.setTag(currentGame);
+
 
         return listItemView;
     }
