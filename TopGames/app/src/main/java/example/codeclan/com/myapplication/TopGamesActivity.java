@@ -2,6 +2,8 @@ package example.codeclan.com.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,5 +23,10 @@ public class TopGamesActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(gameAdapter);
+    }
+
+    public void onListItemClick(View listItem) {
+        Game game = (Game) listItem.getTag();
+        Log.d("Game Title: ", game.getTitle());
     }
 }
